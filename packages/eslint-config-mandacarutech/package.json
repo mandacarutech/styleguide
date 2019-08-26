@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-mandacarutech",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Mandacaru Tech's ESLint config, following our code conventions",
   "main": "index.js",
   "files": [
