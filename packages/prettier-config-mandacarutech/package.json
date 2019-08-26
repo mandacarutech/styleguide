@@ -1,6 +1,6 @@
 {
   "name": "prettier-config-mandacarutech",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Mandacaru's base Prettier config, following our code conventions",
   "keywords": [
     "prettier",
