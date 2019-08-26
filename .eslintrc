@@ -1,0 +1,5 @@
+{
+  "root": true,
+  "extends": ["mandacarutech-base", "plugin:jest/recommended"],
+  "plugins": ["jest"]
+}

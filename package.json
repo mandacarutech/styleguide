@@ -1,0 +1,85 @@
+{
+  "name": "mandacaru-styleguide",
+  "version": "0.0.0-monorepo",
+  "private": true,
+  "engines": {
+    "node": ">= 10.13.0"
+  },
+  "description": "A mostly reasonable approach to JavaScript.",
+  "scripts": {
+    "check:prettier:parser": "prettier --debug-check --ignore-path ./.gitignore 'packages/**/*.@(js|md)'",
+    "lint": "npm-run-all --silent lint:*",
+    "lint:js": "eslint ./packages --cache --cache-location ./node_modules/.cache/eslint --report-unused-disable-directives",
+    "lint:rules": "npm-run-all --silent --print-label lint:rules:*",
+    "lint:rules:base": "eslint-find-rules --unused packages/eslint-config-mandacarutech-base/index.js",
+    "lint:rules:jest": "eslint-find-rules --unused packages/eslint-config-mandacarutech-base/jest.js --no-core",
+    "lint:rules:main": "eslint-find-rules --unused packages/eslint-config-mandacarutech/index.js",
+    "lint:prettier": "eslint --print-config packages/eslint-config-mandacarutech/index.js | eslint-config-prettier-check",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "format": "eslint ./packages --fix",
+    "pretest": "lerna run prepare --loglevel error && yarn run --silent lint",
+    "commitmsg": "commitlint -e $GIT_PARAMS",
+    "prerelease": "yarn test",
+    "release": "lerna publish",
+    "diff": "lerna diff"
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "jest": {
+    "testEnvironment": "node",
+    "testMatch": [
+      "<rootDir>/packages/**/__tests__/**/*.js"
+    ]
+  },
+  "license": "MIT",
+  "keywords": [
+    "style guide",
+    "lint",
+    "mandacarutech",
+    "es6",
+    "es2015",
+    "es2016",
+    "es2017",
+    "es2018",
+    "react",
+    "jsx"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mandacarutech/styleguide.git"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "@commitlint/cli": "^8.1.0",
+    "@commitlint/config-conventional": "^8.1.0",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-eslint": "^10.0.2",
+    "eslint": "^6.1.0",
+    "eslint-config-prettier": "^6.0.0",
+    "eslint-find-rules": "^3.4.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jest": "^22.15.0",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-prettier": "^3.1.0",
+    "eslint-plugin-react": "^7.14.3",
+    "husky": "^3.0.3",
+    "lerna": "^3.16.4",
+    "prettier": "^1.18.2",
+    "markdownlint-cli": "^0.17.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "styled-components": "^4.3.2",
+    "npm-run-all": "^4.1.5"
+  },
+  "dependencies": {
+    "jest": "^24.8.0"
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  }
+}
