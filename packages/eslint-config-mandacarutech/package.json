@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-mandacarutech",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Mandacaru Tech's ESLint config, following our code conventions",
   "main": "index.js",
   "files": [
@@ -45,7 +45,7 @@
     "prettier": "^1.16.4"
   },
   "dependencies": {
-    "eslint-config-mandacarutech-base": "^0.1.0",
-    "prettier-config-mandacarutech": "^0.1.0"
+    "eslint-config-mandacarutech-base": "^0.1.1",
+    "prettier-config-mandacarutech": "^0.1.1"
   }
 }
