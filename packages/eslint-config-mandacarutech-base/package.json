@@ -44,9 +44,6 @@
     "eslint-plugin-prettier": "^3.0.1",
     "prettier": "^1.16.4"
   },
-  "engines": {
-    "node": ">= 10.16.2"
-  },
   "dependencies": {
     "confusing-browser-globals": "^1.0.7",
     "eslint-config-prettier": "^6.0.0",

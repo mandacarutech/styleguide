@@ -2,9 +2,6 @@
   "name": "mandacaru-styleguide",
   "version": "0.0.0-monorepo",
   "private": true,
-  "engines": {
-    "node": ">= 10.13.0"
-  },
   "description": "A mostly reasonable approach to JavaScript.",
   "scripts": {
     "check:prettier:parser": "prettier --debug-check --ignore-path ./.gitignore 'packages/**/*.@(js|md)'",

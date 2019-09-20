@@ -33,9 +33,6 @@
   ],
   "license": "MIT",
   "homepage": "https://github.com/mandacarutech/styleguide/tree/latest/packages/eslint-config-mandacarutech#readme",
-  "engines": {
-    "node": ">= 10.16.2"
-  },
   "peerDependencies": {
     "babel-eslint": "^10.0.1",
     "eslint": "^6.1.0",
